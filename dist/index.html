@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8">
+    <title>Untitled</title>
+    
+
+  </head>
+    
+  <body>
+  <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esperanza y Narrativa | Re-significando el Duelo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;700&family=Lora:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary: #0D9488;
+            --primary-dark: #0F766E;
+            --secondary: #F59E0B;
+            --text: #334155;
+            --light: #F8FAFC;
+            --white: #FFFFFF;
+            --transition: all 0.4s ease;
+        }
+        * { margin:0; padding:0; box-sizing:border-box; scroll-behavior:smooth; }
+        body { font-family:'Montserrat',sans-serif; color:var(--text); line-height:1.7; overflow-x:hidden; background:linear-gradient(135deg,#fdfdfd 0%,#f8f9fa 100%); min-height:100vh; }
+        h1,h2,h3 { font-family:'Lora',serif; }
+        nav { position:fixed; top:0; width:100%; background:rgba(255,255,255,0.95); backdrop-filter:blur(10px); z-index:1000; padding:1rem 0; box-shadow:0 2px 15px rgba(0,0,0,0.05); }
+        .nav-container { max-width:1200px; margin:0 auto; display:flex; justify-content:space-between; align-items:center; padding:0 2rem; }
+        .logo { font-size:1.4rem; font-weight:700; color:var(--primary-dark); text-decoration:none; display:flex; align-items:center; gap:10px; }
+        .nav-links { display:flex; list-style:none; gap:1rem; }
+        .nav-links a { text-decoration:none; color:var(--text); font-weight:600; font-size:0.85rem; text-transform:uppercase; letter-spacing:1px; transition:var(--transition); }
+        .nav-links a:hover { color:var(--primary); }
+        .menu-toggle { display:none; font-size:1.8rem; color:var(--primary-dark); cursor:pointer; }
+        section { padding:100px 2rem 80px; min-height:auto; }
+        .container { max-width:1100px; margin:0 auto; width:100%; }
+        #inicio { position:relative; overflow:hidden; color:var(--white); text-align:center; height:auto; min-height:100vh; padding:80px 2rem 60px; }
+        #bg-video { position:absolute; top:50%; left:50%; min-width:100%; min-height:100%; width:auto; height:auto; transform:translate(-50%,-50%); z-index:-1; object-fit:cover; opacity:0.6; }
+        #inicio::before { content:''; position:absolute; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.3); z-index:-1; }
+        #inicio .container { position:relative; z-index:2; }
+        #inicio h1 { font-size:4.2rem; margin-bottom:1.8rem; line-height:1.2; text-shadow:0 4px 20px rgba(0,0,0,0.4); }
+        #inicio p { font-size:1.6rem; font-family:'Lora',serif; font-style:italic; max-width:900px; margin:0 auto 2.5rem; opacity:0.9; text-shadow:0 2px 10px rgba(0,0,0,0.5); letter-spacing:0.5px; }
+        .btn { display:inline-block; padding:1.2rem 2.5rem; background:var(--secondary); color:var(--white); text-decoration:none; border-radius:50px; font-weight:700; text-transform:uppercase; letter-spacing:1px; transition:var(--transition); box-shadow:0 10px 20px rgba(245,158,11,0.3); position:relative; overflow:hidden; }
+        .btn:hover { transform:translateY(-3px); background:#D97706; box-shadow:0 15px 30px rgba(245,158,11,0.5); }
+        .btn::after { content:''; position:absolute; top:50%; left:50%; width:0; height:0; background:rgba(255,255,255,0.2); border-radius:50%; transform:translate(-50%,-50%); transition:width 0.6s ease,height 0.6s ease; }
+        .btn:hover::after { width:300px; height:300px; }
+        #nosotros { background:linear-gradient(135deg,rgba(165,214,167,0.15) 0%,rgba(165,214,167,0.08) 100%); }
+        #fundamentos, #metodologia, #resultados, #propuesta { background:linear-gradient(135deg,rgba(255,245,157,0.13) 0%,rgba(255,245,157,0.07) 100%); }
+        #contacto { background:linear-gradient(135deg,rgba(224,247,250,0.15) 0%,rgba(224,247,250,0.08) 100%); }
+        .card,.music-section,.music-card,.contact-box,.vision-grid { background:rgba(255,255,255,0.94); border-radius:24px; overflow:hidden; }
+        .vision-content p,.card p,.music-card p,.narrative-quote { background:rgba(255,255,255,0.92); padding:1.2rem; border-radius:12px; }
+        .narrative-quote::before,.section-header::after { content:''; display:block; width:80px; height:3px; margin:1.5rem auto; background:var(--primary); border-radius:2px; opacity:0.5; }
+        .card i,.badge { transition:all 0.4s ease; }
+        .card:hover i { box-shadow:0 0 15px rgba(13,148,136,0.3); transform:scale(1.15); }
+        .badge:hover { box-shadow:0 0 12px rgba(13,148,136,0.25); transform:scale(1.1); }
+        .vision-grid { display:grid; grid-template-columns:1fr 1fr; gap:4rem; align-items:center; }
+        .vision-content h2 { font-size:2.5rem; color:var(--primary-dark); margin-bottom:1.5rem; }
+        .badge { display:inline-block; background:var(--primary); color:white; padding:4px 12px; border-radius:4px; font-size:0.75rem; text-transform:uppercase; font-weight:700; margin-bottom:1rem; }
+        .vision-content p { margin-bottom:1.5rem; font-size:1.05rem; }
+        .vision-image img { width:100%; height:auto; border-radius:30px; box-shadow:20px 20px 0 var(--light); object-fit:cover; loading:lazy; }
+        .section-header h2 { font-size:2.8rem; color:var(--primary-dark); margin-bottom:1rem; }
+        .underline { width:70px; height:5px; background:var(--secondary); margin:0 auto 2.5rem; border-radius:5px; }
+        .grid-cards { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:2.5rem; }
+        .card { padding:3rem 2rem; transition:transform 0.5s ease,box-shadow 0.5s ease; box-shadow:0 8px 30px rgba(0,0,0,0.08); text-align:left; border-bottom:4px solid transparent; overflow:hidden; }
+        .card:hover { transform:translateY(-12px); box-shadow:0 20px 50px rgba(13,148,136,0.18)!important; border-bottom:4px solid var(--primary); }
+        .card i { font-size:2.5rem; color:var(--secondary); margin-bottom:1.5rem; }
+        .card h3 { margin-bottom:1rem; color:var(--primary-dark); font-size:1.4rem; }
+        .music-section { margin-top:5rem; padding:3rem 2rem; box-shadow:0 8px 30px rgba(0,0,0,0.08); }
+        .music-grid { display:flex; flex-wrap:wrap; justify-content:center; gap:3rem; margin:2rem 0; }
+        .music-card { flex:1; min-width:300px; max-width:450px; padding:2rem; text-align:center; border:1px solid rgba(13,148,136,0.15); transition:var(--transition); }
+        .music-card:hover { transform:translateY(-10px) scale(1.02); box-shadow:0 15px 40px rgba(0,0,0,0.12); }
+        .music-card h3 { margin-bottom:1.2rem; color:var(--primary-dark); font-size:1.4rem; }
+        audio { width:100%; margin:1rem 0; }
+        .contact-box { box-shadow:0 20px 60px rgba(0,0,0,0.07); overflow:hidden; }
+        .contact-info { background:var(--primary-dark); color:var(--white); padding:4rem 3rem; }
+        .profile-card { background:rgba(255,255,255,0.08); padding:1.5rem; border-radius:15px; margin-bottom:1.5rem; border-left:4px solid var(--secondary); }
+        .profile-card h4 { font-size:0.8rem; text-transform:uppercase; color:var(--secondary); margin-bottom:5px; }
+        .profile-card .name { font-size:1.15rem; font-weight:700; }
+        .profile-card .title { font-size:0.85rem; font-style:italic; opacity:0.85; display:block; margin-bottom:10px; }
+        .contact-form { padding:4rem; }
+        .form-group { margin-bottom:1.5rem; }
+        .form-group label { display:block; margin-bottom:0.5rem; font-weight:600; font-size:0.9rem; }
+        .form-group input,.form-group textarea { width:100%; padding:0.9rem; border:1px solid #E2E8F0; border-radius:10px; font-family:inherit; }
+        .submit-btn { width:100%; padding:1.1rem; background:var(--primary); color:var(--white); border:none; border-radius:10px; font-weight:700; cursor:pointer; transition:var(--transition); position:relative; overflow:hidden; }
+        .submit-btn:hover { background:#0d7e74; }
+        .submit-btn::after { content:''; position:absolute; top:50%; left:50%; width:0; height:0; background:rgba(255,255,255,0.2); border-radius:50%; transform:translate(-50%,-50%); transition:width 0.6s ease,height 0.6s ease; }
+        .submit-btn:hover::after { width:300px; height:300px; }
+        footer { padding:4rem 2rem; background:#0F172A; color:var(--white); text-align:center; }
+        .footer-logo { font-family:'Lora',serif; font-size:1.8rem; margin-bottom:1.5rem; }
+        footer a { color:var(--white); margin:0 15px; font-size:1.5rem; transition:var(--transition); }
+        footer a:hover { color:var(--secondary); transform:translateY(-3px); }
+        #scroll-top { position:fixed; bottom:30px; right:30px; background:var(--primary); color:white; border:none; width:50px; height:50px; border-radius:50%; font-size:1.4rem; cursor:pointer; opacity:0; visibility:hidden; transition:all 0.3s; box-shadow:0 5px 15px rgba(0,0,0,0.2); z-index:999; }
+        #scroll-top.show { opacity:1; visibility:visible; }
+        .narrative-quote { text-align:center; margin-top:4rem; font-style:italic; color:var(--primary); opacity:0.9; font-size:1.15rem; padding:1.5rem; border-left:4px solid var(--secondary); background:rgba(13,148,136,0.03); border-radius:12px; max-width:800px; margin-left:auto; margin-right:auto; }
+        @media (max-width:768px) {
+            section { padding:80px 1.5rem 60px; }
+            #inicio { height:auto; min-height:80vh; padding:80px 1.5rem 60px; }
+            #inicio h1 { font-size:2.8rem; }
+            #inicio p { font-size:1.3rem; }
+            .btn { padding:1rem 2rem; font-size:0.95rem; }
+            .vision-grid,.contact-box,.music-grid { grid-template-columns:1fr; flex-direction:column; }
+            .nav-links { display:none; }
+            .menu-toggle { display:block; }
+            .contact-form { padding:2.5rem; }
+            .music-card { max-width:100%; }
+            #scroll-top { bottom:20px; right:20px; width:45px; height:45px; font-size:1.2rem; }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <a href="#inicio" class="logo">
+                <i class="fa-solid fa-hands-holding-child"></i> Esperanza & Narrativa
+            </a>
+            <div class="menu-toggle" id="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="nav-links" id="nav-links">
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Propuesta</a></li>
+                <li><a href="#servicios">Ejes</a></li>
+                <li><a href="#fundamentos">Fundamentos Teóricos</a></li>
+                <li><a href="#metodologia">Metodología</a></li>
+                <li><a href="#resultados">Resultados Iniciales</a></li>
+                <li><a href="#propuesta">Propuesta</a></li>
+                <li><a href="#comunidad">Comunidad</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section id="inicio" data-aos="fade-up">
+        <video autoplay muted loop playsinline id="bg-video" poster="https://images.unsplash.com/photo-1499209974431-9dac3adaf471?q=80&w=2070&auto=format&fit=crop" loading="lazy">
+            <source src="https://res.cloudinary.com/dr1scs08g/video/upload/grok-video-4b5d288f-0e99-4f7b-8436-2885c2665a70_xotzzb.mp4" type="video/mp4">
+            Tu navegador no soporta video HTML5.
+        </video>
+        <div class="container">
+            <h1 data-aos="fade-up" data-aos-delay="200">La Esperanza como Recurso Narrativo</h1>
+            <p data-aos="fade-up" data-aos-delay="400">
+                "Re-significar la experiencia del duelo por la pérdida de un ser querido<br>
+                a través de la palabra, la memoria viva y la promesa de un aún-no cumplido."
+            </p>
+            <a href="#contacto" class="btn" data-aos="zoom-in" data-aos-delay="600">
+                <i class="fa-solid fa-hand-holding-heart" style="margin-right: 10px;"></i>
+                Iniciar Acompañamiento
+            </a>
+        </div>
+    </section>
+
+    <section id="nosotros" data-aos="fade-up">
+        <div class="container">
+            <div class="vision-grid">
+                <div class="vision-image">
+                    <img src="https://images.unsplash.com/photo-1516627145497-ae6968895b74?q=80&w=2070&auto=format&fit=crop" alt="Acompañamiento familiar y esperanza" loading="lazy">
+                </div>
+                <div class="vision-content">
+                    <span class="badge">Nuestro Marco Conceptual</span>
+                    <h2>Pedagogía de la Esperanza</h2>
+                    <p>En el marco de la <strong>Cohorte 88 B</strong>, nuestra propuesta aborda el duelo como un proceso relacional y sistémico. No es solo una ausencia, sino una oportunidad de re-significación profunda.</p>
+                    <p>Inspirados en la filosofía de <strong>Ernst Bloch</strong> y la pedagogía de <strong>Paulo Freire</strong>, utilizamos "temas generadores" para romper el silencio y transformar el dolor en un legado de amor resiliente.</p>
+                    <p>Integramos el <strong>Pensamiento Complejo</strong> para comprender la pérdida desde la multidimensionalidad del ser humano, promoviendo la cohesión familiar en comunidades cristianas y entornos educativos de Bogotá.</p>
+                </div>
+            </div>
+            <div class="narrative-quote">
+                "Donde hubo silencio, sembramos palabras. Donde hubo vacío, construimos memoria."
+            </div>
+        </div>
+    </section>
+
+    <section id="servicios" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2>Estrategias de Orientación</h2>
+                <div class="underline"></div>
+                <p style="max-width: 700px; margin: 0 auto 3rem;">Abordamos la experiencia del duelo mediante diálogos generativos y acompañamiento pedagógico integral.</p>
+            </div>
+            <div class="grid-cards">
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-book-open"></i>
+                    <h3>Narrativa Sanadora</h3>
+                    <p>Re-escritura del relato de pérdida mediante el uso de símbolos y palabras, permitiendo que el vínculo con el ser querido evolucione hacia una "Memoria Viva".</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-graduation-cap"></i>
+                    <h3>Escuela de Padres</h3>
+                    <p>Acompañamiento especializado en el <strong>Colegio Parroquial Monseñor Emilio de Brigard</strong>, fortaleciendo el rol educador de la familia frente a las crisis vitales.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <h3>Diálogos Generativos</h3>
+                    <p>Intervenciones basadas en el socioconstruccionismo que buscan crear nuevas realidades y posibilidades de futuro en medio del vacío de la pérdida.</p>
+                </div>
+            </div>
+            <div class="music-section" data-aos="fade-up" data-aos-delay="400">
+                <h2 style="font-size: 2.8rem; color: var(--primary-dark); margin-bottom: 1.5rem; text-align: center; position: relative; display: inline-block; padding-bottom: 15px;">
+                    <i class="fa-solid fa-music" style="margin-right: 12px; color: var(--secondary);"></i>
+                    Memoria Viva, Esperanza Eterna
+                    <span style="position: absolute; bottom: 0; left: 50%; transform: translateX(-50%); width: 120px; height: 4px; background: var(--secondary); border-radius: 2px;"></span>
+                </h2>
+                <p style="max-width: 800px; margin: 0 auto 2.5rem; font-style: italic; font-size: 1.1rem; text-align: center;">
+                    Canción original para el proyecto 'Esperanza como recurso narrativo...'.<br>
+                    Letra generada por Grok (xAI) en colaboración con Juan Camilo Pérez Cortes y Daniel Fernando Almanza Romero.<br>
+                    Música y voz: Suno AI. Uso educativo y no comercial.
+                </p>
+                <div class="music-grid">
+                    <div class="music-card">
+                        <h3>Versión Íntima y Reflexiva</h3>
+                        <audio controls>
+                            <source src="https://www.dropbox.com/scl/fi/f8ylpiaw6cnhovgjonp9b/cancion-1-proyecto.mp3?rlkey=02ioxfg3e2dwreseysk4kai4r&raw=1" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                    </div>
+                </div>
+                <p style="font-size: 0.85rem; opacity: 0.6; margin-top: 2rem; text-align: center;">
+                    Escucha y comparte la esperanza que transforma el duelo.
+                </p>
+            </div>
+            <div class="narrative-quote">
+                "Donde hubo silencio, sembramos palabras. Donde hubo vacío, construimos memoria."
+            </div>
+        </div>
+    </section>
+
+    <section id="fundamentos" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2>Fundamentos Teóricos</h2>
+                <div class="underline"></div>
+                <p style="max-width: 700px; margin: 0 auto 3rem;">El proyecto se sustenta en una integración de conceptos clave para abordar el duelo como proceso relacional.</p>
+            </div>
+            <div class="grid-cards">
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-book"></i>
+                    <h3>Pedagogía Crítica (Freire)</h3>
+                    <p>Usamos temas generadores para romper el silencio y fomentar la concienciación crítica en el duelo, promoviendo la transformación colectiva.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h3>Principio Esperanza (Bloch)</h3>
+                    <p>La esperanza como posibilidad de lo aún-no-sido, integrada con la virtud teologal cristiana, para resignificar la pérdida y abrir futuros.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-diagram-project"></i>
+                    <h3>Perspectiva Sistémica (Bateson, Cala)</h3>
+                    <p>El duelo como sistema dinámico con retroalimentación circular, donde el cambio en una parte transforma el todo relacional familiar.</p>
+                </div>
+            </div>
+            <div class="narrative-quote">
+                "La narrativa transforma lo inefable en palabra y el dolor en legado compartido."
+            </div>
+        </div>
+    </section>
+
+    <section id="metodologia" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2>Metodología</h2>
+                <div class="underline"></div>
+                <p style="max-width: 700px; margin: 0 auto 3rem;">Enfoque cualitativo, interventivo-participativo, de tipo investigación-acción participativa (IAP).</p>
+            </div>
+            <div class="grid-cards">
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-search"></i>
+                    <h3>Diálogos Generativos</h3>
+                    <p>Preguntas abiertas para co-construir narrativas y romper el silencio inicial.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-pencil-alt"></i>
+                    <h3>Técnicas Narrativas</h3>
+                    <p>Externalización, memoria viva y re-autoría para transformar la pérdida en legado.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-chart-line"></i>
+                    <h3>Análisis y Registro</h3>
+                    <p>Formularios y observación participante para comparar narrativas antes-después.</p>
+                </div>
+            </div>
+            <div class="narrative-quote">
+                "El rigor ético es condición sine qua non de la validez del proceso."
+            </div>
+        </div>
+    </section>
+
+    <section id="resultados" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2>Resultados Iniciales</h2>
+                <div class="underline"></div>
+                <p style="max-width: 700px; margin: 0 auto 3rem;">De las primeras sesiones, emergió un tránsito de narrativas de ruptura a narrativas de continuidad y esperanza.</p>
+            </div>
+            <div class="grid-cards">
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-chart-pie"></i>
+                    <h3>Aumento de Participación</h3>
+                    <p>De 81% a 94% de deseo de continuar, rompiendo el silencio inicial.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-heart"></i>
+                    <h3>Emergencia de Esperanza</h3>
+                    <p>Frases como “mantener una esperanza” y “lo que nos dejaron es un aprendizaje para la vida”.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-link"></i>
+                    <h3>Reparación Vincular</h3>
+                    <p>De silencio y culpa a relatos compartidos que fortalecen la cohesión familiar.</p>
+                </div>
+            </div>
+            <div class="narrative-quote">
+                "Del vacío paralizante a un horizonte de sentido compartido."
+            </div>
+        </div>
+    </section>
+
+    <section id="propuesta" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2>Propuesta de Acompañamiento</h2>
+                <div class="underline"></div>
+                <p style="max-width: 700px; margin: 0 auto 3rem;">Hacia la Fase 2: estrategias prácticas para resignificar el duelo en familia.</p>
+            </div>
+            <div class="grid-cards">
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <i class="fa-solid fa-users"></i>
+                    <h3>Grupos de Apoyo</h3>
+                    <p>Espacios permanentes para compartir narrativas y fortalecer resiliencia colectiva.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-pray"></i>
+                    <h3>Rituales Familiares</h3>
+                    <p>Altares conmemorativos y actividades solidarias para honrar la memoria y transformar el dolor.</p>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h3>Portafolio de Recursos</h3>
+                    <p>Guías, ejercicios y reflexiones para replicar en otros colegios católicos.</p>
+                </div>
+            </div>
+            <div class="narrative-quote">
+                "La ambición verdadera está en cuántas vidas logramos acompañar con presencia y esperanza."
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Comunidad (con cambios aplicados) -->
+    <section id="comunidad" data-aos="fade-up">
+        <div class="container">
+            <div class="section-header">
+                <h2>Comunidad Interactiva</h2>
+                <div class="underline"></div>
+                <p style="max-width: 700px; margin: 0 auto 3rem;">
+                    Únete a nuestro servidor de Discord para conversar en tiempo real, compartir memorias vivas, reflexiones y tejer esperanza juntos en un espacio seguro y cálido.
+                </p>
+            </div>
+            <div class="grid-cards">
+                <!-- Chat Discord -->
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <i class="fa-solid fa-comment-dots"></i>
+                    <h3>Chat en Vivo</h3>
+                    <p>Conversación en tiempo real, apoyo mutuo y espacio para compartir experiencias con respeto y cariño.</p>
+                    <div style="text-align: center; margin-top: 20px;">
+                        <a href="https://discord.gg/mRQw5zQVhD" target="_blank" class="btn">
+                            <i class="fa-brands fa-discord" style="margin-right: 12px; font-size: 1.3rem;"></i>
+                            Unirse a Re-VidaHilosMemoria-significar
+                        </a>
+                    </div>
+                    <p style="font-size: 0.85rem; margin-top: 15px; opacity: 0.8; text-align: center;">
+                        Espacio seguro, moderado y acogedor. ¡Tu voz importa aquí!
+                    </p>
+                </div>
+
+                <!-- Opinión -->
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <i class="fa-solid fa-heart"></i>
+                    <h3>Ayúdanos con tu Opinión</h3>
+                    <form action="https://formsubmit.co/jucamilopecort@unimonserrate.edu.co" method="POST">
+                        <textarea name="opinion" placeholder="Comparte tu experiencia o reflexión..." required rows="5"></textarea>
+                        <button type="submit">Enviar Opinión</button>
+                    </form>
+                </div>
+
+                <!-- Sugerencia -->
+                <div class="card" data-aos="fade-up" data-aos-delay="400">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <h3>¿Tienes alguna Sugerencia?</h3>
+                    <form action="https://formsubmit.co/jucamilopecort@unimonserrate.edu.co" method="POST">
+                        <textarea name="sugerencia" placeholder="Ideas para mejorar el proyecto..." required rows="5"></textarea>
+                        <button type="submit">Enviar Sugerencia</button>
+                    </form>
+                </div>
+
+                <!-- Narrativas -->
+                <div class="card" data-aos="fade-up" data-aos-delay="500">
+                    <i class="fa-solid fa-feather-pointed"></i>
+                    <h3>Narrativas que podríamos tejer juntos</h3>
+                    <p>¿Qué historias de memoria viva, legado, resiliencia o esperanza te gustaría compartir o explorar en comunidad? Un fragmento, una reflexión, una idea... todo cuenta y puede inspirar a otros.</p>
+                    <div style="text-align: center; margin: 25px 0;">
+                        <a href="https://discord.gg/mRQw5zQVhD" target="_blank" class="btn">
+                            <i class="fa-brands fa-discord" style="margin-right: 12px; font-size: 1.4rem;"></i>
+                            Compartir mi narrativa en el servidor
+                        </a>
+                    </div>
+                    <p style="font-size: 0.9rem; opacity: 0.85; text-align: center; line-height: 1.5;">
+                        En el canal #narrativas-vivas o #compartir-memorias (crearemos uno dedicado si hace falta).<br>
+                        Espacio seguro, con respeto y escucha activa. Nadie está solo en su relato.
+                    </p>
+                </div>
+            </div>
+            <div class="narrative-quote">
+                "La comunidad es el espacio donde las narrativas se entretejen y la esperanza se comparte."
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" data-aos="fade-up">
+        <div class="container">
+            <div class="contact-box">
+                <div class="contact-info">
+                    <h2 style="font-family:'Lora',serif; font-size:2.2rem; margin-bottom:1.5rem;">Nuestro Equipo</h2>
+                    <p style="margin-bottom:2.5rem; opacity:0.9;">Especialistas en Educación y Orientación Familiar dedicados a acompañar procesos de transformación y resiliencia.</p>
+             
+                    <div class="profile-card">
+                        <h4>Consultor Senior</h4>
+                        <div class="name">Juan Camilo Pérez Cortes</div>
+                        <span class="title">Filósofo | Especialista en Educación y Orientación Familiar</span>
+                        <p style="font-size:0.9rem;"><i class="fa-solid fa-envelope" style="color:var(--secondary);"></i> juan-perez1997@hotmail.com</p>
+                        <p style="font-size:0.9rem;"><i class="fa-solid fa-phone" style="color:var(--secondary);"></i> +57 315 570 4723</p>
+                    </div>
+                    <div class="profile-card">
+                        <h4>Consultor Senior</h4>
+                        <div class="name">Daniel Fernando Almanza Romero</div>
+                        <span class="title">Sacerdote | Especialista en Educación y Orientación Familiar</span>
+                        <p style="font-size:0.9rem;"><i class="fa-solid fa-envelope" style="color:var(--secondary);"></i> almanzadaniel77@gmail.com</p>
+                        <p style="font-size:0.9rem;"><i class="fa-solid fa-phone" style="color:var(--secondary);"></i> +57 321 415 8060</p>
+                    </div>
+                    <div style="margin-top:2rem; font-size:0.85rem; opacity:0.7;">
+                        <p><i class="fa-solid fa-location-dot"></i> Bogotá D.C., Colombia</p>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <!-- QR agregado aquí -->
+                    <div style="text-align:center; margin: 0 auto 2.5rem; max-width: 300px;">
+                        <p style="font-size: 1.15rem; color: var(--primary); margin-bottom: 1rem; font-weight: 600;">
+                            Escanea este QR desde tu celular para dejar tus comentarios finales
+                        </p>
+                        <img src="https://api.qrserver.com/v1/create-qr-code/?size=220x220&data=https://codepen.io/Juan-Camilo-Perez-Cortes/full/NPrEwxj" alt="QR para formulario de comentarios" style="width: 100%; max-width: 220px; border-radius: 12px; box-shadow: 0 8px 20px rgba(0,0,0,0.15);">
+                    </div>
+                    <h3 style="margin-bottom: 25px; font-size: 1.6rem; color: var(--primary-dark);">Solicitar Información</h3>
+                    <form action="https://formsubmit.co/jucamilopecort@unimonserrate.edu.co" method="POST">
+                        <div class="form-group">
+                            <label>Nombre Completo</label>
+                            <input type="text" name="name" placeholder="Ej. María Fernanda" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Correo Electrónico</label>
+                            <input type="email" name="email" placeholder="su-correo@ejemplo.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>¿Cómo podemos acompañarle?</label>
+                            <textarea name="message" rows="4" placeholder="Cuéntenos brevemente su necesidad..." required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Mensaje</button>
+                    </form>
+                </div>
+            </div>
+            <div class="narrative-quote">
+                "Donde hubo silencio, sembramos palabras. Donde hubo vacío, construimos memoria."
+            </div>
+        </div>
+    </section>
+
+    <button id="scroll-top" title="Volver arriba">
+        <i class="fa-solid fa-arrow-up"></i>
+    </button>
+
+    <footer>
+        <div class="footer-logo">Esperanza & Narrativa</div>
+        <p style="font-size: 0.9rem; opacity: 0.8;">Proyecto de Orientación Familiar - Cohorte 88 B</p>
+        <p style="font-size: 0.8rem; opacity: 0.6; margin-top: 5px;">Bajo la asesoría de Adrián David Galindo Ubaque.</p>
+        <div style="margin-top: 1rem;">
+            <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+        </div>
+        <div style="margin-top: 30px; font-size: 0.75rem; opacity: 0.4;">
+            © 2026 Todos los derechos reservados. Bogotá D.C.
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1200,
+            once: true,
+            easing: 'ease-in-out-sine'
+        });
+        document.getElementById('menu-toggle').addEventListener('click', () => {
+            document.getElementById('nav-links').classList.toggle('active');
+        });
+        window.addEventListener('scroll', () => {
+            const btn = document.getElementById('scroll-top');
+            if (window.scrollY > 300) {
+                btn.classList.add('show');
+            } else {
+                btn.classList.remove('show');
+            }
+        });
+        document.getElementById('scroll-top').addEventListener('click', () => {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+    </script>
+</body>
+</html>
+    
+  </body>
+  
+</html>
